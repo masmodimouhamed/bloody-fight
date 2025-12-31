@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://cy00iiyhbuf1y"]
+
+[ext_resource type="Texture2D" uid="uid://dfwisey6nv14n" path="res://image/coming_soon.png" id="1_6avee"]
+[ext_resource type="Script" uid="uid://brubtysdwvcvs" path="res://edit_word.gd" id="1_q8ott"]
+[ext_resource type="FontFile" uid="uid://bnthvox6p6eck" path="res://Rosmie-Bold.ttf" id="2_vhmry"]
+[ext_resource type="StyleBox" uid="uid://com68dokk7tkh" path="res://focus_btn.tres" id="3_q8ott"]
+[ext_resource type="StyleBox" uid="uid://cf7gssglen2ri" path="res://hover_btn.tres" id="4_duha3"]
+[ext_resource type="StyleBox" uid="uid://hjqglhl2x20y" path="res://normal_btn.tres" id="5_s5lxp"]
+[ext_resource type="AudioStream" uid="uid://cmh44qtxhcpow" path="res://sound_effects/dieThrow1.ogg" id="7_duha3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mx7ym"]
+font = ExtResource("2_vhmry")
+font_size = 92
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q8ott")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(954, 548)
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("1_6avee")
+
+[node name="coming_soon" type="Label" parent="."]
+offset_top = 376.0
+offset_right = 1915.0
+offset_bottom = 583.0
+text = "coming_soon"
+label_settings = SubResource("LabelSettings_mx7ym")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="."]
+modulate = Color(1, 0.439216, 0.439216, 1)
+offset_left = 724.0
+offset_top = 757.0
+offset_right = 1240.0
+offset_bottom = 902.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_vhmry")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_q8ott")
+theme_override_styles/hover = ExtResource("4_duha3")
+theme_override_styles/normal = ExtResource("5_s5lxp")
+text = "back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_duha3")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

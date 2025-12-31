@@ -1,0 +1,216 @@
+[gd_scene load_steps=15 format=3 uid="uid://bsuctju7ht3hn"]
+
+[ext_resource type="Script" uid="uid://caw0ms6g0sck6" path="res://menu.gd" id="1_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://bqxewnp6dev7r" path="res://7d870a0c6f1e4899919a0aea6c86603a.png" id="2_l48gv"]
+[ext_resource type="StyleBox" uid="uid://com68dokk7tkh" path="res://focus_btn.tres" id="3_ecwwl"]
+[ext_resource type="FontFile" uid="uid://bnthvox6p6eck" path="res://Rosmie-Bold.ttf" id="3_kk3ma"]
+[ext_resource type="StyleBox" uid="uid://cf7gssglen2ri" path="res://hover_btn.tres" id="4_kk3ma"]
+[ext_resource type="StyleBox" uid="uid://hjqglhl2x20y" path="res://normal_btn.tres" id="5_nrnbx"]
+[ext_resource type="AudioStream" uid="uid://cmh44qtxhcpow" path="res://sound_effects/dieThrow1.ogg" id="6_l48gv"]
+[ext_resource type="PackedScene" uid="uid://cfujjws6uthy7" path="res://Knight_1/setting.tscn" id="8_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://dc4kdj01vp4rb" path="res://image/exit.png" id="9_nrnbx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q8x"]
+bg_color = Color(0.27, 0.391667, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_112p8"]
+bg_color = Color(0.27, 0.391667, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_112p8"]
+font = ExtResource("3_kk3ma")
+font_size = 62
+font_color = Color(0.947406, 3.77826e-06, 1.73271e-06, 1)
+shadow_size = 100
+shadow_color = Color(0.15, 0, 0.75, 0)
+shadow_offset = Vector2(3, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk3ma"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nrnbx"]
+font = ExtResource("3_kk3ma")
+font_size = 92
+
+[node name="Node" type="Node"]
+script = ExtResource("1_ytr4m")
+
+[node name="7d870a0c6f1e4899919a0Aea6c86603a" type="Sprite2D" parent="."]
+position = Vector2(0.0162787, 0.0783472)
+scale = Vector2(1.40712, 1.43047)
+texture = ExtResource("2_l48gv")
+offset = Vector2(685.714, 381.429)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 962.0
+offset_bottom = 711.0
+scale = Vector2(2.00376, 1.51694)
+
+[node name="main_button" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -157.0
+offset_right = 240.0
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="play" type="Button" parent="main_button"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_ecwwl")
+theme_override_styles/hover = ExtResource("4_kk3ma")
+theme_override_styles/normal = ExtResource("5_nrnbx")
+text = "play"
+
+[node name="setting" type="Button" parent="main_button"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_ecwwl")
+theme_override_styles/hover = ExtResource("4_kk3ma")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2q8x")
+text = "setting"
+
+[node name="help" type="Button" parent="main_button"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_ecwwl")
+theme_override_styles/hover = ExtResource("4_kk3ma")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2q8x")
+text = "help"
+
+[node name="quit" type="Button" parent="main_button"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_ecwwl")
+theme_override_styles/hover = ExtResource("4_kk3ma")
+theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+text = "quit"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -466.0
+offset_top = 43.0
+offset_right = 467.0
+offset_bottom = 195.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_112p8")
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_l48gv")
+
+[node name="setting" parent="." instance=ExtResource("8_kk3ma")]
+visible = false
+offset_left = -363.0
+offset_top = -226.0
+offset_right = 386.0
+offset_bottom = 271.0
+
+[node name="back2" type="Button" parent="setting"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+offset_left = 174.0
+offset_top = 392.0
+offset_right = 590.0
+offset_bottom = 468.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_ecwwl")
+theme_override_styles/hover = ExtResource("4_kk3ma")
+theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+text = "back"
+
+[node name="help" type="Panel" parent="."]
+offset_right = 1932.0
+offset_bottom = 1090.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kk3ma")
+
+[node name="title" type="Label" parent="help"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 204.0
+text = "help"
+label_settings = SubResource("LabelSettings_nrnbx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="help"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 263.0
+offset_right = 1918.0
+offset_bottom = 1027.0
+theme_override_fonts/font = ExtResource("3_kk3ma")
+theme_override_font_sizes/font_size = 32
+text = "Combat and Confrontation Guide
+Welcome to the battlefield! This game relies on speed and intelligence in managing your strength. Combat is not just random striking; it is precise management of your resources:
+
+Token System:
+
+You have only two tokens in each offensive round.
+
+Each sword strike or shield use consumes 1 token.
+
+Once both tokens are consumed, you will become unable to attack or defend until you recharge.
+
+Forced Recharge:
+
+After using the two tokens, you must press the Recharge button to restore your energy, but be careful: if you use it while the opponent attacks, you will receive a heavy hit.
+
+Combat Style:
+
+Sword: to strike the opponent and reduce their health.
+
+Shield: to protect yourself, but remember that if you use it and the opponent uses recharge, they will have the advantage to win.
+
+Winning Strategy:
+
+Do not rush to spend both tokens together; try to make your strikes precise."
+scroll_smooth = true
+
+[node name="exit" type="Button" parent="help"]
+layout_mode = 0
+offset_left = 1783.0
+offset_top = 33.0
+offset_right = 2303.0
+offset_bottom = 553.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("9_nrnbx")
+
+[connection signal="pressed" from="main_button/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="main_button/setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="main_button/help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="main_button/quit" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="main_button/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="setting/back2" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="help/exit" to="." method="_on_exit_pressed"]

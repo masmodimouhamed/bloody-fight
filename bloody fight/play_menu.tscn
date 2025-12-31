@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://conf510enom7n"]
+
+[ext_resource type="Script" uid="uid://cfhk48ovunim0" path="res://play_menu.gd" id="1_br1it"]
+[ext_resource type="Texture2D" uid="uid://5tgaib40a8pr" path="res://image/file_00000000fc3471f6a8d8d66083618fe6.png" id="2_u3k0c"]
+[ext_resource type="FontFile" uid="uid://bnthvox6p6eck" path="res://Rosmie-Bold.ttf" id="3_1p45p"]
+[ext_resource type="StyleBox" uid="uid://com68dokk7tkh" path="res://focus_btn.tres" id="3_u3k0c"]
+[ext_resource type="StyleBox" uid="uid://cf7gssglen2ri" path="res://hover_btn.tres" id="4_1p45p"]
+[ext_resource type="StyleBox" uid="uid://hjqglhl2x20y" path="res://normal_btn.tres" id="5_l5iki"]
+[ext_resource type="AudioStream" uid="uid://cmh44qtxhcpow" path="res://sound_effects/dieThrow1.ogg" id="6_u3k0c"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_br1it")
+
+[node name="202512171157Image" type="Sprite2D" parent="."]
+modulate = Color(0.94, 1, 1, 1)
+position = Vector2(2033.97, 905.192)
+scale = Vector2(1.25521, 1.13184)
+texture = ExtResource("2_u3k0c")
+offset = Vector2(-858, -339)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 680.0
+offset_top = 610.0
+offset_right = 1308.0
+offset_bottom = 994.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="multiplayer" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_1p45p")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_u3k0c")
+theme_override_styles/hover = ExtResource("4_1p45p")
+theme_override_styles/normal = ExtResource("5_l5iki")
+text = "multiplayer"
+icon_alignment = 1
+
+[node name="edit_word" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_1p45p")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_u3k0c")
+theme_override_styles/hover = ExtResource("4_1p45p")
+theme_override_styles/normal = ExtResource("5_l5iki")
+text = "edit word
+"
+icon_alignment = 1
+
+[node name="main_menu" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 0.439216, 0.439216, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_1p45p")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/focus = ExtResource("3_u3k0c")
+theme_override_styles/hover = ExtResource("4_1p45p")
+theme_override_styles/normal = ExtResource("5_l5iki")
+text = "main menu
+"
+icon_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_u3k0c")
+
+[connection signal="pressed" from="VBoxContainer/multiplayer" to="." method="_on_multiplayer_pressed"]
+[connection signal="pressed" from="VBoxContainer/edit_word" to="." method="_on_edit_word_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]

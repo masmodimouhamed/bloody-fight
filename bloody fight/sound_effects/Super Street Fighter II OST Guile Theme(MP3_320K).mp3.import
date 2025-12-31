@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cac11vxsp8a1m"
+path="res://.godot/imported/Super Street Fighter II OST Guile Theme(MP3_320K).mp3-3f6b5b48ecd4807c78c8c1d97543ef10.mp3str"
+
+[deps]
+
+source_file="res://sound_effects/Super Street Fighter II OST Guile Theme(MP3_320K).mp3"
+dest_files=["res://.godot/imported/Super Street Fighter II OST Guile Theme(MP3_320K).mp3-3f6b5b48ecd4807c78c8c1d97543ef10.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

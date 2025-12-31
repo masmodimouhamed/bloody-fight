@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuhp1a5jfuv8e"
+path="res://.godot/imported/_The Army of Minotaur_ by _Makai-symphony  🇯🇵 _ Fighting Music (No Copyright) 💣(MP3_160K).mp3-b27a8b51ac7f7487e71b81db0ed061d4.mp3str"
+
+[deps]
+
+source_file="res://sound_effects/_The Army of Minotaur_ by _Makai-symphony  🇯🇵 _ Fighting Music (No Copyright) 💣(MP3_160K).mp3"
+dest_files=["res://.godot/imported/_The Army of Minotaur_ by _Makai-symphony  🇯🇵 _ Fighting Music (No Copyright) 💣(MP3_160K).mp3-b27a8b51ac7f7487e71b81db0ed061d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

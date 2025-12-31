@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://4pqund3nukl7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y32ns"]
+bg_color = Color(0.49185187, 0.34272325, 0.24352601, 1)
+corner_radius_top_left = 21
+corner_radius_top_right = 21
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
+bg_color = Color(0.22745098, 0, 0, 1)
+corner_radius_top_left = 21
+corner_radius_top_right = 21
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+
+[sub_resource type="LabelSettings" id="LabelSettings_0e48y"]
+line_spacing = 7.0
+font_size = 52
+font_color = Color(0.99, 0.99, 0.99, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y32ns"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtcfe"]
+font_size = 32
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [344.0, 452.0, 1013.0]
+
+[node name="setting" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.69803923)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 696.0
+offset_top = 265.0
+offset_right = 1445.0
+offset_bottom = 762.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y32ns")
+
+[node name="title" type="Label" parent="setting"]
+layout_mode = 0
+offset_right = 750.0
+offset_bottom = 99.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wtcfe")
+text = "setting"
+label_settings = SubResource("LabelSettings_0e48y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="setting"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 145.0
+offset_right = 337.0
+offset_bottom = 448.0
+
+[node name="music" type="Label" parent="setting/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y32ns")
+text = "music               :"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="setting/VBoxContainer/music"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = -13.0
+offset_right = 552.0
+offset_bottom = 62.0
+value = 100.0
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="setting/VBoxContainer"]
+layout_mode = 2
+
+[node name="window" type="Label" parent="setting/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y32ns")
+text = "window size   :"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="setting/VBoxContainer"]
+layout_mode = 2
+
+[node name="laguage" type="Label" parent="setting/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y32ns")
+text = "language         :"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="setting"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 393.0
+offset_right = 577.0
+offset_bottom = 472.0
+action_mode = 0
+text = "back"
